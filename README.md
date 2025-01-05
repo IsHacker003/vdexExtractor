@@ -28,8 +28,8 @@ The following external libraries should be installed the in the host system:
 1. zlib
     * macOS with homebrew: `brew install zlib-devel`
     * macOS with macports: `port install zlib`
-    * Linux with apt: `apt install libz-dev`
-    * Other Linux/Unix systems: Check available package manager or compile from sources
+    * GNU/Linux distros (like Debian) with apt: `apt install libz-dev`
+    * Other GNU/Linux or Unix systems: Check available package manager or compile from sources
     * Windows with cygwin: Install `zlib-devel` from cygwin installer
 
 
