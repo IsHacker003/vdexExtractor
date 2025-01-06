@@ -1,9 +1,9 @@
-# Vdex Extractor
+# VDEX Extractor
 
-Command line tool to decompile and extract Android Dex bytecode from Vdex files that are generated
-along with Oat files when optimizing bytecode from dex2oat ART runtime compiler. Vdex file format
+Command line tool to decompile and extract Android Dex bytecode from VDEX files that are generated
+along with oat files when optimizing bytecode from dex2oat ART runtime compiler. VDEX file format
 has been introduced in the Oreo (API-26) build. More information is available [here][vdex-cr]. It
-should be noted that Oat files are no longer storing the matching Dex files inside their `.rodata`
+should be noted that oat files are no longer storing the matching DEX files inside their `.rodata`
 section. Instead they're always paired with a matching Vdex container file.
 
 
@@ -58,12 +58,12 @@ $ bin/vdexExtractor -h
 
 ## Bytecode Unquickening Decompiler
 
-The Vdex file includes all quick_info data (old vtable) required to revert the dex-to-dex
+The VDEX file includes all quick_info data (old vtable) required to revert the dex-to-dex
 transformations applied during bytecode optimization. The idea here is to create a quick standalone
 tool capable to revert optimized bytecode, that does not require building the entire libart from
 AOSP.
 
-The Vdex fully unquicken functionality has been also implemented as part of the AOSP oatdump libart
+The VDEX fully unquicken functionality has been also implemented as part of the AOSP oatdump libart
 tool. The upstream contribution is available [here][aosp-master]. If you want to use oatdump with
 Oreo release you can use the corresponding patch [here][oatdump-oreo] or fork and build (inside and
 AOSP_SRC_ROOT workspace) the oreo-release branch of the [oatdump++][oatdump-plus] tool. Google has
