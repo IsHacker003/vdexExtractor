@@ -652,7 +652,7 @@ bool dexInstr_HasVarArgs(u2 *code_ptr) {
          (kInstructionDescriptors[dexInstr_getOpcode(code_ptr)].format == k45cc);
 }
 
-void dexInstr_getVarArgs(u2 *code_ptr, u4 arg[kMaxVarArgRegs]) {
+void dexInstr_getVarArgs(u2 *code_ptr, u4 arg[]) {
   CHECK(dexInstr_HasVarArgs(code_ptr));
 
   // Note that the fields mentioned in the spec don't appear in
